@@ -11,7 +11,7 @@
                 @apply px-2 py-1 bg-white rounded-xl border text-sm font-light border-gray-200 justify-start items-start;
             }
             label{
-                @apply text-gray-900 text-sm font-semibold leading-normal mb-1;
+                @apply text-gray-900 text-xs md:text-sm font-semibold leading-normal mb-1;
             }
             .title{
                 @apply text-gray-600 text-sm font-light
@@ -29,37 +29,38 @@
     </style>
 </head>
 <body>
-    <div id="navbar" class="text-black flex justify-evenly">
-        <div class="w-screen h-[69px] px-20 py-4 bg-white bg-opacity-80 backdrop-blur-[30px] justify-between items-center inline-flex shadow-md">
+    <nav id="navbar" class="text-black flex md:justify-evenly justify-between">
+        <div class="w-screen h-[69px] md:px-20 py-4 bg-white bg-opacity-80 backdrop-blur-[30px] justify-between items-center inline-flex shadow-md">
             <div class="justify-start items-center gap-5 flex">
                 <div class="px-[11px] py-0.5 justify-center items-center gap-3 flex">
                     <a class="text-base font-normal hover:underline hover:opacity-80" href="store.html">Shop</a>
                 </div>
+            </div>
+            <a class="flex items-center hover:opacity-80" href="index.html">
+                <img src="./asset/dark-logo.png" class="w-12 h-12"/>
+                <span class="m-2 font-semibold">SCOOPS</span>
+            </a>
+            <div class="h-6 justify-end items-center gap-5 flex">
+                <a class="w-6 hover:opacity-80" href="checkout.html"><img src="./asset/cart.png"/></a>
+                <a class="w-6 hover:opacity-80" href="login.html"><img src="./asset/user.png" /></a>
+            </div>
         </div>
-        <a class="flex items-center hover:opacity-80" href="index.html">
-            <img src="./asset/dark-logo.png" class="w-12 h-12"/>
-            <span class="m-2 font-semibold">SCOOPS</span>
-        </a>
-        <div class="h-6 justify-end items-center gap-5 flex">
-            <a class="w-6 hover:opacity-80" href="checkout.html"><img src="./asset/cart.png"/></a>
-            <a class="w-6 hover:opacity-80" href="login.html"><img src="./asset/user.png" /></a>
-        </div>
-        </div>
-    </div>
+    </nav>
 
-    <div class="flex flex-col items-center">
-        <div class="m-8 p-4 justify-start items-start w-4/5">
-            <p class="text-gray-900 text-4xl font-semibold leading-10">Check Out</p>
-            <h3 class="text-gray-600 text-sm font-light">Homepage / Checkout</h3>
+    <div class="flex flex-col items-center justify-center">
+ 
+        <div class="m-8 p-4 justify-start items-start w-full md:w-4/5">
+            <p class="text-gray-900 text-xl md:text-4xl font-semibold leading-10">Check Out</p>
+            <h3 class="hidden md:block text-gray-600 text-sm font-light">Homepage / Checkout</h3>
         </div>
-        <div class="flex items-start justify-start w-4/5">
-            <form class="flex flex-col justify-center items-center w-1/2 p-2 m-2">
+        <div class="flex flex-col md:flex-row items-start justify-between w-full md:w-4/5 px-4 md:px-0 md:gap-5">
+            <form class="flex flex-col justify-center items-center w-full md:p-2 md:m-2">
                 <div id="contact" class="info">
                     <div class="inline-flex p-2">
                         <img src="./asset/svgcontact.svg" alt="contact_img"/>
                         <div class="title pl-1">CONTACT INFO</div>
                     </div>
-                    <div class="flex p-2 justify-between">
+                    <div class="flex p-2 justify-center md:justify-between">
                         <div class="inline-input">
                             <label for="phone">Your Phone Number</label>
                             <input type="phone" name="phone" id="phone" placeholder="Phone Number">
@@ -86,7 +87,7 @@
                             <label for="name">Name on the card</label>
                             <input type="name" name="name" id="name">
                         </div>
-                        <div class="flex justify-between">
+                        <div class="flex justify-center md:justify-between">
                             <div class="inline-input ">
                                 <label for="date">Expiration data(MM/YY)</label>
                                 <input type="month" name="date" id="date">
@@ -95,9 +96,7 @@
                                 <label for="cvc">CVC</label>
                                 <input type="text" name="cvc" id="cvc" pattern="\d{3,4}">
                             </div>
-                        </div>
-
-                    
+                        </div>      
                     </div>
 
                 </div>
@@ -106,7 +105,7 @@
                         <img src="./asset/svgshipping.svg" alt="address_img"/>
                         <div class="title pl-1">Billing ADDRESS</div>
                     </div>
-                    <div class="flex p-2 justify-between">
+                    <div class="flex p-2 justify-center md:justify-between">
                         <div class="inline-input">
                             <label for="first">First Name</label>
                             <input type="text" name="first" id="first" placeholder="First Name">
@@ -123,7 +122,7 @@
                             <input type="text" name="address" id="address" >
                         </div>                      
                     </div>
-                    <div class="flex p-2 justify-between">
+                    <div class="flex p-2 justify-center md:justify-between">
                         <div class="inline-input">
                             <label for="city">City</label>
                             <input type="text" name="city" id="city">
@@ -133,10 +132,10 @@
                             <input type="text" name="country" id="country">
                         </div>
                     </div>
-                    <div class="flex p-2 justify-between">
+                    <div class="flex p-2 justify-center md:justify-between">
                         <div class="inline-input">
                             <label for="state">State</label>
-                            <select name="state" id="state" class="px-2 py-1 bg-white rounded-xl border text-sm font-light border-gray-200 justify-start items-start">
+                            <select name="state" id="state" class="w-[90%] md:w-auto px-2 py-1 bg-white rounded-xl border text-sm font-light border-gray-200 justify-start items-start">
                                 <option value="">--Please choose an option--</option>
                                 <option value="AL">Alabama</option>
                                 <option value="AK">Alaska</option>
@@ -192,19 +191,67 @@
                         </div>
                         <div class="inline-input">
                             <label for="post">Postal code</label>
-                            <input type="text" name="post" id="post" pattern="^\d{5}(-\d{4})?$" required>
+                            <input type="text" name="post" id="post" pattern="^\d{5}(-\d{4})?$" required class="w-[90%] md:w-auto">
                         </div>
                     </div>
 
                 </div>
             </form>
-            <div class="flex flex-col w-1/2">
-                <h3 class="text-gray-900 text-xl font-semibold leading-10">Order summary</h3>
-                <table>
-                    
-                </table>
+            <div class="flex flex-col">
+                <div class="flex flex-col justify-start items-start p-2 m-2 w-max">
+                    <h3 class="text-gray-900 text-lg md:text-xl font-semibold leading-10 p-2">Order summary</h3>
+                    <div class="flex flex-col items-center justify-center md:gap-5 md:m-2">
+                        <div class="flex-col divide-y w-full border-y md:m-2">
+                            <div class="flex w-full py-6 px-4 gap-6">
+                                <div class="flex-1">
+                                    <img src="./asset/ice_cream_sando.jpg" alt="icecream1" class="w-20 h-20"/>
+                                </div>
+                                <div class="flex-col justify-start items-start w-max">
+                                    <p class="text-gray-600 font-semibold text-sm">Ice Cream</p>
+                                    <p class="text-gray-600 font-light text-xs">Strawberry</p>
+                                    
+                                </div>
+                            <div class="flex-none text-sm font-normal">$11.99</div>
+                        </div>
+                        <div class="flex-col divide-y w-full border-y md:m-2">
+                            <div class="flex w-full py-6 px-4 gap-6">
+                                <div class="flex-1">
+                                    <img src="./asset/ice_cream_sando.jpg" alt="icecream1" class="w-20 h-20"/>
+                                </div>
+                                <div class="flex-col justify-start items-start w-max">
+                                    <p class="text-gray-600 font-semibold text-sm">Ice Cream</p>
+                                    <p class="text-gray-600 font-light text-xs">Strawberry</p>
+                                    
+                                </div>
+                            <div class="flex-none text-sm font-normal">$11.99</div>
+                        </div>
+                        <div class="flex-col divide-y w-full border-y md:m-2">
+                            <div class="flex w-full py-6 px-4 gap-6">
+                                <div class="flex-1">
+                                    <img src="./asset/ice_cream_sando.jpg" alt="icecream1" class="w-20 h-20"/>
+                                </div>
+                                <div class="flex-col justify-start items-start w-max">
+                                    <p class="text-gray-600 font-semibold text-sm">Ice Cream</p>
+                                    <p class="text-gray-600 font-light text-xs">Strawberry</p>
+                                    
+                                </div>
+                            <div class="flex-none text-sm font-normal">$11.99</div>
+                        </div>
+                    </div>
+    
+                    <div class="flex w-full p-6 justify-between">
+                        
+                        <p class="text-gray-600 font-semibold text-sm">Subtotal</p>
+                        
+                        <div class="w-1/4 text-sm font-normal">$35.97</div>
+                    </div>
+                    <button type="submit" class="w-full px-20 py-1 bg-gray-900 text-white text-base font-medium rounded-full leading-normal hover:opacity-80">Submit</button>
+                    </div>
+                 
+                </div>
             </div>
         </div>
+   
     </div>
     
 </body>
