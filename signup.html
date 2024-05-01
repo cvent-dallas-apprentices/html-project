@@ -5,11 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SignUp</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            input{
+                @apply px-6 md:px-10 py-2 bg-white rounded-xl border border-gray-200 justify-start items-start;
+            }
+            label{
+                @apply text-gray-900 text-base font-semibold leading-normal mb-1;
+            }
+            .radio_input{
+                @apply text-gray-600 text-sm font-normal p-2 mx-2;
+            }
+        }
+    </style>
    
 </head>
-<body>
-    <div id="navbar" class="text-black flex justify-evenly">
-        <div class="w-screen h-[69px] px-20 py-4 bg-white bg-opacity-80 backdrop-blur-[30px] justify-between items-center inline-flex shadow-md">
+<body class="flex flex-col justify-center items-center w-screen m-0 p-0" style="box-sizing: border-box;">
+    <nav id="navbar" class="text-black flex md:justify-evenly justify-between">
+        <div class="w-screen h-[69px] md:px-20 py-4 bg-white bg-opacity-80 backdrop-blur-[30px] justify-between items-center inline-flex shadow-md">
             <div class="justify-start items-center gap-5 flex">
                 <div class="px-[11px] py-0.5 justify-center items-center gap-3 flex">
                     <a class="text-base font-normal hover:underline hover:opacity-80" href="store.html">Shop</a>
@@ -24,7 +37,49 @@
             <a class="w-6 hover:opacity-80" href="login.html"><img src="./asset/user.png" /></a>
         </div>
         </div>
+    </nav>
+    <div class="flex flex-col justify-center items-center md:w-[600px]">
+        <div class="text-gray-900 text-4xl font-semibold m-8 p-4">
+            <h1 class="leading-10">Register</h1>
+        </div>
+        <form class="w-full flex flex-col justify-start items-center gap-6">
+            <div class="flex flex-col">
+                <label for="email">Username</label>
+                <input type="email" name="username" id="username" placeholder="Username">
+            </div>
+            <div class="flex flex-col">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" placeholder="example@example.com">
+            </div>
+            <div class="flex flex-col">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password" placeholder="Password">
+            </div>
+            <div class="flex flex-col">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password">
+            </div>
+            <dif class="flex flex-col">
+                <label for="hear-about-us" class="text-center">How did you hear about us?</label>
+                <div class="flex justify-evenly items-center">
+                    <input type="radio" name="hear-about-us" id="hear-about-us" value="instagram" class="radio_input">Instagram</input>
+                    <input type="radio" name="hear-about-us" id="hear-about-us" value="google" class="radio_input">Google</input>
+                    <input type="radio" name="hear-about-us" id="hear-about-us" value="facebook" class="radio_input">Facebook</input>
+                </div>
+            </dif>
+            <button type="submit" class="px-20 py-1 bg-gray-900 text-white text-base font-medium rounded-full leading-normal hover:opacity-80">Continue</button>
+        </form>
+        <hr>
+        <div class="flex items-center py-5">
+            <div class="min-w-[60vw] md:min-w-[10vw] flex-grow border-t border-gray-400"></div>
+            <span class="mx-4 flex-shrink text-gray-400">OR</span>
+            <div class="min-w-[60vw] md:min-w-[10vw] flex-grow border-t border-gray-400"></div>
+        </div>
+        <div class="w-[205px] h-6 justify-start items-center inline-flex">
+            <div><span class="text-gray-600 text-base font-normal leading-normal">Already a member? </span>
+                <a class="text-sky-500 text-base font-normal leading-normal" href="login.html">Login</a></div>
+          </div>
+
     </div>
-    <h1>Sign Up page</h1>
 </body>
 </html>

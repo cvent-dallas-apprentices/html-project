@@ -8,28 +8,23 @@
   <title>Scoops!</title>
 </head>
 <body>
-    <div id="navbar" class="text-black">
-        <div class="w-screen h-[69px] px-20 py-4 bg-white bg-opacity-80 backdrop-blur-[30px] justify-between items-center inline-flex">
-        <div class="h-[23px] justify-start items-center gap-5 flex">
-            <div class="px-[11px] py-0.5 justify-center items-center gap-2.5 flex">
-            <div class="text-base font-normal">Shop</div>
-            </div>
-            <div class="px-[11px] py-0.5 justify-center items-center gap-2.5 flex">
-            <div class="text-base font-normal">Login / SignUp</div>
-            </div>
+    <nav id="navbar" class="text-black flex md:justify-evenly justify-between">
+        <div class="w-screen h-[69px] md:px-20 py-4 bg-white bg-opacity-80 backdrop-blur-[30px] justify-between items-center inline-flex shadow-md">
+            <div class="justify-start items-center gap-5 flex">
+                <div class="px-[11px] py-0.5 justify-center items-center gap-3 flex">
+                    <a class="text-base font-normal hover:underline hover:opacity-80" href="store.html">Shop</a>
+                </div>
         </div>
-        <div class="flex items-center">
+        <a class="flex items-center hover:opacity-80" href="index.html">
             <img src="./asset/dark-logo.png" class="w-12 h-12"/>
             <span class="m-2 font-semibold">SCOOPS</span>
-        </div>
-
-        <div class="w-[97px] h-[37px] relative"></div>
+        </a>
         <div class="h-6 justify-end items-center gap-5 flex">
-            <div class="w-6 h-6 relative"><img src="./asset/cart.png"/></div>
-            <div class="w-6 h-6 inline-flex"><img src="./asset/user.png" /></div>
+            <a class="w-6 hover:opacity-80" href="checkout.html"><img src="./asset/cart.png"/></a>
+            <a class="w-6 hover:opacity-80" href="login.html"><img src="./asset/user.png" /></a>
         </div>
         </div>
-    </div>
+    </nav>
 
     <div class="flex flex-wrap"></div>
     <div class="w-[1536px] h-[1108px] pt-10 pb-[72px] justify-center items-center inline-flex">
