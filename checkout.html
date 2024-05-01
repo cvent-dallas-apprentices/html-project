@@ -25,6 +25,9 @@
             .inline-input{
                 @apply flex flex-col p-2 w-full
             }
+            td{
+                @apply p-6 border-b
+            }
         }
     </style>
 </head>
@@ -49,12 +52,12 @@
 
     <div class="flex flex-col items-center justify-center">
  
-        <div class="m-8 p-4 justify-start items-start w-full md:w-4/5">
+        <div class="m-8 p-4 justify-start items-start w-full md:w-3/4">
             <p class="text-gray-900 text-xl md:text-4xl font-semibold leading-10">Check Out</p>
             <h3 class="hidden md:block text-gray-600 text-sm font-light">Homepage / Checkout</h3>
         </div>
-        <div class="flex flex-col md:flex-row items-start justify-between w-full md:w-4/5 px-4 md:px-0 md:gap-5">
-            <form class="flex flex-col justify-center items-center w-full md:p-2 md:m-2">
+        <div class="flex flex-col md:flex-row items-start justify-between w-full md:w-3/4 px-4 md:px-0 md:gap-5">
+            <form class="flex flex-col justify-center w-full items-center md:p-2 md:m-2">
                 <div id="contact" class="info">
                     <div class="inline-flex p-2">
                         <img src="./asset/svgcontact.svg" alt="contact_img"/>
@@ -197,56 +200,56 @@
 
                 </div>
             </form>
-            <div class="flex flex-col">
-                <div class="flex flex-col justify-start items-start p-2 m-2 w-max">
+            <div class="flex flex-col w-full">
+                <div class="flex flex-col justify-start items-start p-2 m-2 md:w-full">
                     <h3 class="text-gray-900 text-lg md:text-xl font-semibold leading-10 p-2">Order summary</h3>
-                    <div class="flex flex-col items-center justify-center md:gap-5 md:m-2">
-                        <div class="flex-col divide-y w-full border-y md:m-2">
-                            <div class="flex w-full py-6 px-4 gap-6">
-                                <div class="flex-1">
-                                    <img src="./asset/ice_cream_sando.jpg" alt="icecream1" class="w-20 h-20"/>
-                                </div>
-                                <div class="flex-col justify-start items-start w-max">
+                    <table class="table-auto w-full border-y divide-y py-6 px-4 gap-6">           
+                        <tr>
+                            <td>      
+                                <img src="./asset/ice_cream_sando.jpg" alt="icecream1" class="w-20 h-20"/>         
+                            </td>
+                            <td class="flex-col justify-start items-start">        
                                     <p class="text-gray-600 font-semibold text-sm">Ice Cream</p>
                                     <p class="text-gray-600 font-light text-xs">Strawberry</p>
-                                    
-                                </div>
-                            <div class="flex-none text-sm font-normal">$11.99</div>
-                        </div>
-                        <div class="flex-col divide-y w-full border-y md:m-2">
-                            <div class="flex w-full py-6 px-4 gap-6">
-                                <div class="flex-1">
-                                    <img src="./asset/ice_cream_sando.jpg" alt="icecream1" class="w-20 h-20"/>
-                                </div>
-                                <div class="flex-col justify-start items-start w-max">
+                            </td>
+                            <td class="flex-none text-sm font-normal">
+                               $11.99
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>      
+                                <img src="./asset/ice_cream_sando.jpg" alt="icecream1" class="w-20 h-20"/>         
+                            </td>
+                            <td class="flex-col justify-start items-start">        
                                     <p class="text-gray-600 font-semibold text-sm">Ice Cream</p>
                                     <p class="text-gray-600 font-light text-xs">Strawberry</p>
-                                    
-                                </div>
-                            <div class="flex-none text-sm font-normal">$11.99</div>
-                        </div>
-                        <div class="flex-col divide-y w-full border-y md:m-2">
-                            <div class="flex w-full py-6 px-4 gap-6">
-                                <div class="flex-1">
-                                    <img src="./asset/ice_cream_sando.jpg" alt="icecream1" class="w-20 h-20"/>
-                                </div>
-                                <div class="flex-col justify-start items-start w-max">
+                            </td>
+                            <td class="flex-none text-sm font-normal">
+                               $11.99
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>      
+                                <img src="./asset/ice_cream_sando.jpg" alt="icecream1" class="w-20 h-20"/>         
+                            </td>
+                            <td class="flex-col justify-start items-start">        
                                     <p class="text-gray-600 font-semibold text-sm">Ice Cream</p>
                                     <p class="text-gray-600 font-light text-xs">Strawberry</p>
-                                    
-                                </div>
-                            <div class="flex-none text-sm font-normal">$11.99</div>
-                        </div>
-                    </div>
+                            </td>
+                            <td class="flex-none text-sm font-normal">
+                               $11.99
+                            </td>
+                        </tr>
+                 
+                    </table>
     
                     <div class="flex w-full p-6 justify-between">
-                        
+                    
                         <p class="text-gray-600 font-semibold text-sm">Subtotal</p>
-                        
+                    
                         <div class="w-1/4 text-sm font-normal">$35.97</div>
                     </div>
                     <button type="submit" class="w-full px-20 py-1 bg-gray-900 text-white text-base font-medium rounded-full leading-normal hover:opacity-80">Submit</button>
-                    </div>
                  
                 </div>
             </div>
