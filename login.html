@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
    
 </head>
-<body>
+<body class="flex flex-col justify-center items-center w-screen m-0 p-0" style="box-sizing: border-box;">
     <nav id="navbar" class="text-black flex md:justify-evenly justify-between">
         <div class="w-screen h-[69px] md:px-20 py-4 bg-white bg-opacity-80 backdrop-blur-[30px] justify-between items-center inline-flex shadow-md">
             <div class="justify-start items-center gap-5 flex">
@@ -24,56 +24,35 @@
             <a class="w-6 hover:opacity-80" href="login.html"><img src="./asset/user.png" /></a>
         </div>
         </div>
-    </div>    
-    <div class="w-[700px] h-[608.80px] pt-10 pb-[72px] flex flex-col justify-center items-center">
-        <div></div>
-        <div class="grow shrink basis-0 flex-col justify-center items-center gap-[60px] inline-flex">
-          <div class="justify-center items-center inline-flex mb-10">
+    </nav>
+    <div class="pt-10 pb-16 px-4 flex flex-col justify-center items-center">
+        <div class="mb-10">
             <div class="text-gray-900 text-4xl font-semibold leading-10">Login</div>
-          </div>
-          <div class="h-[396.80px] flex-col justify-start items-center gap-6 flex">
-            <div class="self-stretch h-[304.40px] pb-2 flex-col justify-start items-center gap-6 flex">
-              <div class="self-stretch h-[75.20px] flex-col justify-start items-start gap-2 flex">
-                <div class="justify-start items-start inline-flex">
-                  <div class="text-gray-900 text-base font-semibold leading-normal">Email</div>
-                </div>
-                <div class="self-stretch px-4 py-3 bg-white rounded-xl border border-gray-200 justify-start items-start inline-flex">
-                    <input type="email" class="w-[171.06px] h-[19.20px] text-gray-600 text-opacity-60 text-sm font-normal bg-transparent border-none outline-none" placeholder="example@example.com">
-                </div>
-              </div>
-              <div class="self-stretch h-[75.20px] flex-col justify-start items-start gap-2 flex">
-                <div class="justify-start items-start inline-flex">
-                  <div class="text-gray-900 text-base font-semibold leading-normal">Password</div>
-                </div>
-                <div class="self-stretch px-4 py-3 bg-white rounded-xl border border-gray-200 justify-start items-start inline-flex">
-                    <input type="password" class="w-full h-full text-gray-600 text-opacity-60 text-sm font-normal bg-transparent border-none outline-none" placeholder="Enter your password">
-                </div>
-              </div>
-              <div class="justify-start items-center flex">
-                <label class="flex items-center">
-                  <input type="checkbox" class="form-checkbox text-slate-400 h-5 w-5 mr-2">
-                  <span class="text-gray-600 text-sm font-normal leading-tight">Remember Me?</span>
-                </label>
-              </div>
-              <a href="logged_in.html" class="self-stretch py-3.5 bg-gray-900 rounded-full shadow justify-center items-center inline-flex hover:bg-gray-800">
-                <div class="justify-start items-center flex">
-                  <span class="text-white font-medium">Continue</span>
-                </div>
-              </a>                  
-            </div>
-            <div class="w-[440px] h-[20.40px] relative">
-              <div class="w-[440px] h-[1.60px] left-0 top-[8.20px] absolute border border-gray-100"></div>
-              <div class="w-[51.83px] h-[20.40px] left-[194.09px] top-0 absolute bg-white">
-                <div class="left-[16px] top-0 absolute justify-start items-center inline-flex">
-                  <div class="text-gray-600 text-sm font-medium leading-tight">OR</div>
-                </div>
-              </div>
-            </div>
-            <div>
-                <a href="signup.html" class="text-gray-600 text-base font-normal leading-normal hover:text-sky-500">New user? Create an account</a>
-            </div>
         </div>
-      </div>
+        <div class="w-full max-w-md flex flex-col gap-6">
+            <div class="flex flex-col gap-2">
+                <label for="email" class="text-gray-900 text-base font-semibold leading-normal">Email</label>
+                <input id="email" type="email" class="w-full px-4 py-3 bg-white rounded-xl border border-gray-200 text-gray-600 text-opacity-60 text-sm font-normal focus:outline-none" placeholder="example@example.com">
+            </div>
+            <div class="flex flex-col gap-2">
+                <label for="password" class="text-gray-900 text-base font-semibold leading-normal">Password</label>
+                <input id="password" type="password" class="w-full px-4 py-3 bg-white rounded-xl border border-gray-200 text-gray-600 text-opacity-60 text-sm font-normal focus:outline-none" placeholder="Enter your password">
+            </div>
+            <div class="flex items-center">
+                <input id="remember-me" type="checkbox" class="form-checkbox text-slate-400 h-5 w-5 mr-2">
+                <label for="remember-me" class="text-gray-600 text-sm font-normal leading-tight">Remember Me?</label>
+            </div>
+            <a href="logged_in.html" class="w-full py-3.5 bg-gray-900 rounded-full shadow text-center text-white font-medium hover:bg-gray-800">Continue</a>
+        </div>
+        <div class="w-full max-w-md mt-8 relative">
+            <div class="w-full h-0.5 bg-gray-100"></div>
+            <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white px-2">OR</div>
+        </div>
+        <div class="mt-8">
+            <a href="signup.html" class="text-gray-600 text-base font-normal leading-normal hover:text-sky-500">New user? Create an account</a>
+        </div>
+    </div>
+    
       
 </body>
 </html>
