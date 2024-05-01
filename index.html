@@ -11,44 +11,43 @@
     <div id="navbar" class="text-black flex justify-evenly">
         <div class="w-screen h-[69px] px-20 py-4 bg-white bg-opacity-80 backdrop-blur-[30px] justify-between items-center inline-flex shadow-md">
             <div class="justify-start items-center gap-5 flex">
-                <div class="px-[11px] py-0.5 justify-center items-center gap-3 flex">
+                <div class="hidden md:flex px-[11px] py-0.5 justify-center items-center gap-3">
                     <a class="text-base font-normal hover:underline hover:opacity-80" href="store.html">Shop</a>
                     <a class="text-base font-normal hover:underline hover:opacity-80" href="login.html">LogIn</a>
                     <a class="text-base font-normal hover:underline hover:opacity-80" href="signup.html">SignUp</a>
-                </div>
-          
+                </div>    
         </div>
         <a class="flex items-center hover:opacity-80" href="index.html">
             <img src="./asset/dark-logo.png" class="w-12 h-12"/>
             <span class="m-2 font-semibold">SCOOPS</span>
         </a>
         <div class="h-6 justify-end items-center gap-5 flex">
-            <a class="w-6 hover:opacity-80" href="checkout.html"><img src="./asset/cart.png"/></a>
-            <a class="w-6 hover:opacity-80" href="login.html"><img src="./asset/user.png" /></a>
+            <a class="w-8 md:w-6 hover:opacity-80" href="checkout.html"><img src="./asset/cart.png"/></a>
+            <a class="w-8 md:w-6 hover:opacity-80" href="login.html"><img src="./asset/user.png" /></a>
         </div>
         </div>
     </div>
-    <div class="m-4 p-6 flex flex-col justify-center h-[95vh]" >
-        <div class="flex justify-center items-center">
+    <div class="m-4 p-6 flex flex-col justify-center md:h-[95vh]" >
+        <div class="flex flex-col md:flex-row justify-center items-center">
             <div class="flex-col justify-center items-end inline-flex m-2 p-8">
-                <p class="text-white text-[50px] font-bold text-right">New Flavors</p>
-                <ul class="text-white text-xl font-normal">
-                    <li>Key Lime!</li>
+                <p class="text-white text-[30px] md:text-[50px] font-bold text-right">New Flavors</p>
+                <ul class="text-white text-xl font-normal md:block inline-flex">
+                    <li class="mr-2 md:mr-0">Key Lime!</li>
                     <li>PinkDrink!</li>
                 </ul>
             </div>
-            <div class="h-[80vh]">
-                <img src="./asset/large-dark-logo.png" class="object-fill h-[70vh] w-auto"/>
+            <div class="h-1/3 md:h-[80vh]">
+                <img src="./asset/large-dark-logo.png" class="object-fill md:h-[70vh] w-auto"/>
             </div>
-            <div class="m-2 p-6 flex flex-col justify-center items-start ">
-             <p class="text-white text-[50px] font-bold text-right">New Snack</p>
+            <div class="hidden md:flex m-2 p-6 flex-col justify-center items-start ">
+             <p class="text-white  text-[30px] md:text-[50px] font-bold text-right">New Snack</p>
              <ul class="text-white text-xl font-normal">
                 <li>Fresh</li>
                 <li>Delicious</li>
             </ul>
             </div>
         </div>
-        <div class="text-center">
+        <div class="text-center  mt-8">
             <button class="w-[300px] px-20 py-2 bg-gray-200 text-2xl font-normal rounded-lg">Shop Now</button>
         </div>
     </div>
