@@ -5,9 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
-   
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                black: '#191718',
+              }
+            }
+          }
+        }
+      </script>
 </head>
-<body style="background-color: #191718;">
+<body class="bg-black">
     <div id="navbar" class="text-black flex justify-evenly">
         <div class="w-screen h-[69px] px-20 py-4 bg-white bg-opacity-80 backdrop-blur-[30px] justify-between items-center inline-flex shadow-md">
             <div class="justify-start items-center gap-5 flex">
@@ -47,7 +57,7 @@
                  </ul>
             </div>
         </div>
-        <div class="text-center mt-8">
+        <div class="text-center text-black mt-8">
             <a class="w-[300px] px-20 py-2 bg-gray-200 text-2xl font-normal rounded-lg hover:opacity-80" href="store.html">Shop Now</a>
         </div>
     </div>
