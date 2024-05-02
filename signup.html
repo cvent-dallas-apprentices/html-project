@@ -18,7 +18,6 @@
             }
         }
     </style>
-   
 </head>
 <body class="flex flex-col justify-center items-center w-screen m-0 p-0" style="box-sizing: border-box;">
     <nav id="navbar" class="text-black flex md:justify-evenly justify-between">
@@ -27,15 +26,15 @@
                 <div class="px-[11px] py-0.5 justify-center items-center gap-3 flex">
                     <a class="text-base font-normal hover:underline hover:opacity-80" href="store.html">Shop</a>
                 </div>
-        </div>
-        <a class="flex items-center hover:opacity-80" href="index.html">
-            <img src="./asset/dark-logo.png" class="w-12 h-12"/>
-            <span class="m-2 font-semibold">SCOOPS</span>
-        </a>
-        <div class="h-6 justify-end items-center gap-5 flex">
-            <a class="w-6 hover:opacity-80" href="checkout.html"><img src="./asset/cart.png"/></a>
-            <a class="w-6 hover:opacity-80" href="login.html"><img src="./asset/user.png" /></a>
-        </div>
+            </div>
+            <a class="flex items-center hover:opacity-80" href="index.html">
+                <img src="./asset/dark-logo.png" alt="logo" class="w-12 h-12">
+                <span class="m-2 font-semibold">SCOOPS</span>
+            </a>
+            <div class="h-6 justify-end items-center gap-5 flex">
+                <a class="w-6 hover:opacity-80" href="checkout.html"><img src="./asset/cart.png" alt="cart"></a>
+                <a class="w-6 hover:opacity-80" href="login.html"><img src="./asset/user.png" alt="user"></a>
+            </div>
         </div>
     </nav>
     <div class="flex flex-col justify-center items-center md:w-[600px]">
@@ -44,29 +43,39 @@
         </div>
         <form class="w-full flex flex-col justify-start items-center gap-6">
             <div class="flex flex-col">
-                <label for="email">Username</label>
-                <input type="email" name="username" id="username" placeholder="Username">
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username" placeholder="Username" required>
             </div>
             <div class="flex flex-col">
                 <label for="email">Email</label>
-                <input type="email" name="email" id="email" placeholder="example@example.com">
+                <input type="email" name="email" id="email" placeholder="example@example.com" pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" required>
             </div>
             <div class="flex flex-col">
                 <label for="password">Password</label>
-                <input type="password" name="password" id="password" placeholder="Password">
+                <input type="password" name="password" id="password" placeholder="Password" required minlength="8" maxlength="20">
             </div>
             <div class="flex flex-col">
                 <label for="confirm-password">Confirm Password</label>
-                <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password">
+                <input type="password" name="confirm-password" id="confirm-password" placeholder="Confirm Password" required minlength="8" maxlength="20">
             </div>
-            <dif class="flex flex-col">
-                <label for="hear-about-us" class="text-center">How did you hear about us?</label>
+            <div class="flex flex-col">
+                <label class="text-center">How did you hear about us?</label>
                 <div class="flex justify-evenly items-center">
-                    <input type="radio" name="hear-about-us" id="hear-about-us" value="instagram" class="radio_input">Instagram</input>
-                    <input type="radio" name="hear-about-us" id="hear-about-us" value="google" class="radio_input">Google</input>
-                    <input type="radio" name="hear-about-us" id="hear-about-us" value="facebook" class="radio_input">Facebook</input>
+                    <!-- Correctly associate each label with its respective input using 'id' -->
+                    <label for="instagram" class="radio_input">
+                        <input type="radio" name="hear-about-us" id="instagram" value="instagram">
+                        Instagram
+                    </label>
+                    <label for="google" class="radio_input">
+                        <input type="radio" name="hear-about-us" id="google" value="google">
+                        Google
+                    </label>
+                    <label for="facebook" class="radio_input">
+                        <input type="radio" name="hear-about-us" id="facebook" value="facebook">
+                        Facebook
+                    </label>
                 </div>
-            </dif>
+            </div>
             <button type="submit" class="px-20 py-1 bg-gray-900 text-white text-base font-medium rounded-full leading-normal hover:opacity-80">Continue</button>
         </form>
         <hr>
