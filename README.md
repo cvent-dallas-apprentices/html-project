@@ -38,11 +38,11 @@ Follow these steps to set up the project locally:
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/cvent-dallas-apprentices/html-project.git
-   ```
+
 2. **Navigate to the project directory:**
    ```bash
    cd html-project
-   ``
+   
 3. **Open the project:**
 
    Open the entire folder in your preferred IDE.
