@@ -5,18 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LogIn</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <style type="text/tailwindcss">
-        @layer utilities {
-            input{
-                @apply px-6 md:px-10 py-2 bg-white rounded-xl border border-gray-200 justify-start items-start;
-            }
-            label{
-                @apply text-gray-900 text-base font-semibold leading-normal mb-1;
-            }
-            .radio_input{
-                @apply text-gray-600 text-sm font-normal p-2 mx-2;
-            }
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+            padding: 0;
         }
+        .container {
+            max-width: 500px;
+            margin: 20px auto;
+            padding: 40px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 30px;
+            width: 400px;
+        }
+        .label {
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .input {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+            height: 50px; /* Increased height */
+        }
+        .checkbox-label {
+            font-size: 14px;
+            color: #666;
+            display: inline-block;
+            vertical-align: middle;
+            margin-left: 5px;
+        }
+        .button {
+            width: 100%;
+            padding: 20px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .button:hover {
+            background-color: #222;
+        }
+
     </style>
 </head>
 <body class="flex flex-col justify-center items-center w-screen m-0 p-0" style="box-sizing: border-box;">
@@ -26,35 +68,37 @@
                 <div class="px-[11px] py-0.5 justify-center items-center gap-3 flex">
                     <a class="text-base font-normal hover:underline hover:opacity-80" href="store.html">Shop</a>
                 </div>
-            </div>
-            <a class="flex items-center hover:opacity-80" href="index.html">
-                <img src="./asset/dark-logo.png" class="w-12 h-12"/>
-                <span class="m-2 font-semibold">SCOOPS</span>
-            </a>
-            <div class="h-6 justify-end items-center gap-5 flex">
-                <a class="w-6 hover:opacity-80" href="checkout.html"><img src="./asset/cart.png"/></a>
-                <a class="w-6 hover:opacity-80" href="login.html"><img src="./asset/user.png" /></a>
-            </div>
+        </div>
+        <a class="flex items-center hover:opacity-80" href="index.html">
+            <img src="./asset/dark-logo.png" alt="company logo" class="w-12 h-12">
+            <span class="m-2 font-semibold">SCOOPS</span>
+        </a>
+        <div class="h-6 justify-end items-center gap-5 flex">
+            <a class="w-6 hover:opacity-80" href="checkout.html"><img src="./asset/cart.png" alt="cart button"></a>
+            <a class="w-6 hover:opacity-80" href="login.html"><img src="./asset/user.png" alt="login button"></a>
+        </div>
         </div>
     </nav>
     <div class="pt-10 pb-16 px-4 flex flex-col justify-center items-center">
         <div class="mb-10">
             <div class="text-gray-900 text-4xl font-semibold leading-10">Login</div>
         </div>
-        <div class="w-full max-w-md flex flex-col gap-6">
-            <div class="flex flex-col gap-2">
-                <label for="email" class="text-gray-900 text-base font-semibold leading-normal">Email</label>
-                <input id="email" type="email" class="w-full px-4 py-3 bg-white rounded-xl border border-gray-200 text-gray-600 text-opacity-60 text-sm font-normal focus:outline-none" placeholder="example@example.com">
-            </div>
-            <div class="flex flex-col gap-2">
-                <label for="password" class="text-gray-900 text-base font-semibold leading-normal">Password</label>
-                <input id="password" type="password" class="w-full px-4 py-3 bg-white rounded-xl border border-gray-200 text-gray-600 text-opacity-60 text-sm font-normal focus:outline-none" placeholder="Enter your password">
-            </div>
-            <div class="flex items-center">
-                <input id="remember-me" type="checkbox" class="form-checkbox text-slate-400 h-5 w-5 mr-2">
-                <label for="remember-me" class="text-gray-600 text-sm font-normal leading-tight">Remember Me?</label>
-            </div>
-            <a href="logged_in.html" class="w-full py-3.5 bg-gray-900 rounded-full shadow text-center text-white font-medium hover:bg-gray-800">Continue</a>
+        <div class="container">
+            <form id="login-form" action="logged_in.html" method="post">
+                <div class="form-group">
+                    <label for="email" class="label">Email</label>
+                    <input id="email" name="email" type="email" class="input" placeholder="example@example.com" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+                </div>
+                <div class="form-group">
+                    <label for="password" class="label">Password</label>
+                    <input id="password" name="password" type="password" class="input" placeholder="Enter your password" minlength="6" maxlength="20" required>
+                </div>
+                <div class="form-group">
+                    <input id="remember-me" name="remember-me" type="checkbox">
+                    <label for="remember-me" class="checkbox-label">Remember Me?</label>
+                </div>
+                <button type="submit" class="button">Continue</button>
+            </form>
         </div>
         <div class="w-full max-w-md mt-8 relative">
             <div class="w-full h-0.5 bg-gray-100"></div>
