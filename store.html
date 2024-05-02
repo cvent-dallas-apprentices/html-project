@@ -3,9 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ice Cream Shop</title>
+    <title>Scoop Shop</title>
     <script src="https://cdn.tailwindcss.com"></script>
-  <title>Scoops!</title>
+    <style>
+        .product-container {
+            padding: 30px;
+        }
+
+        .ice-cream-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 30px;
+        }
+        .ice-cream-item {
+            width: calc(33.33% - 20px);
+            aspect-ratio: 1 / 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        .ice-cream-image {
+            width: 100%;
+            height: 60%;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+        .ice-cream-details {
+            padding: 15px;
+            background-color: #fff;
+            height: 40%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .add-to-cart-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #000;
+            border: none;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 0 0 10px 10px;
+            cursor: pointer;
+        }
+        .add-to-cart-button:hover {
+            background-color: #45a049;
+        }
+
+        @media (max-width: 768px) {
+            .ice-cream-item {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .ice-cream-item {
+                width: calc(100% - 20px);
+            }
+        }
+    </style>
 </head>
 <body>
     <nav id="navbar" class="text-black flex md:justify-evenly justify-between">
@@ -14,304 +77,131 @@
                 <div class="px-[11px] py-0.5 justify-center items-center gap-3 flex">
                     <a class="text-base font-normal hover:underline hover:opacity-80" href="store.html">Shop</a>
                 </div>
-        </div>
-        <a class="flex items-center hover:opacity-80" href="index.html">
-            <img src="./asset/dark-logo.png" class="w-12 h-12"/>
-            <span class="m-2 font-semibold">SCOOPS</span>
-        </a>
-        <div class="h-6 justify-end items-center gap-5 flex">
-            <a class="w-6 hover:opacity-80" href="checkout.html"><img src="./asset/cart.png"/></a>
-            <a class="w-6 hover:opacity-80" href="login.html"><img src="./asset/user.png" /></a>
-        </div>
+            </div>
+            <a class="flex items-center hover:opacity-80" href="index.html">
+                <img src="./asset/dark-logo.png" alt="company logo" class="w-12 h-12">
+                <span class="m-2 font-semibold">SCOOPS</span>
+            </a>
+            <div class="h-6 justify-end items-center gap-5 flex">
+                <a class="w-6 hover:opacity-80" href="checkout.html"><img src="./asset/cart.png" alt="cart button"></a>
+                <a class="w-6 hover:opacity-80" href="login.html"><img src="./asset/user.png" alt="login button"></a>
+            </div>
         </div>
     </nav>
 
-    <div class="flex flex-wrap"></div>
-    <div class="w-[1536px] h-[1108px] pt-10 pb-[72px] justify-center items-center inline-flex">
-    <div class="w-[1296px] h-[996px] relative">
-        <div class="w-[967px] h-[996px] left-[329px] top-0 absolute flex-col justify-start items-end gap-[52px] inline-flex">
-        <div class="w-[967px] justify-start items-start gap-5 inline-flex flex-wrap">
-            <div class="w-[309px] flex-col justify-start items-start gap-5 inline-flex">
-            <div class="w-[309px] h-[347px] relative bg-slate-50 rounded-2xl">
-                <img class="object-contain w-80 h-[360px] left-[-6px] top-[-6px] absolute" src="./asset/Pistachio-Gelato_01_V2_1290px.jpeg" />
-                <div class="p-2.5 left-[261px] top-[12px] absolute bg-white rounded-full flex-col justify-center items-center inline-flex">
-                    <div class="w-4 h-4 relative">
-                      <img class="absolute inset-0 object-cover rounded-full" src="./asset/cart.png" alt="Cart Image">
-                    </div>
-                  </div>
-            </div>
-            <div class="w-[309px] px-4 justify-start items-start gap-5 inline-flex">
-                <div class="grow shrink basis-0 flex-col justify-start items-start gap-[15px] inline-flex">
-                <div class="h-[46px] flex-col justify-start items-start gap-0.5 flex">
-                    <div class="justify-start items-start inline-flex">
-                    <div class="grow shrink basis-0 text-gray-900 text-base font-semibold leading-normal">Pistachio Gelato</div>
-                    </div>
-                    <div class="justify-start items-center inline-flex">
-                    <div class="text-gray-600 text-sm font-normal leading-tight">Pint</div>
-                    </div>
-                </div>
-                <div class="justify-start items-start gap-1 inline-flex">
-                    <div class="w-5 h-5 relative"></div>
-                    <div class="justify-start items-center flex">
+    <!-- Group 1 -->
+    <div class="ice-cream-container">
+        <!-- Pistachio Gelato -->
+        <div class="ice-cream-item product-container">
+            <img class="ice-cream-image" src="./asset/Pistachio-Gelato_01_V2_1290px.jpeg" alt="Pistachio Gelato">
+            <div class="ice-cream-details">
+                <div class="w-full flex md:flex-col flex-row md:items-center pt-4">
+                    <div class="mr-2 md:mr-0 md:text-center">
+                    <div class="text-gray-900 text-lg font-semibold leading-7">Pistachio Gelato</div>
                     <div class="text-gray-600 text-sm font-normal leading-tight">4.9 (98)</div>
                     </div>
+                    <div class="ml-2 md:mr-0 md:text-center">
+                        <div class="text-gray-900 text-base font-semibold leading-normal">$12</div>
+                        <div class="text-gray-600 text-sm font-normal leading-tight">Pint</div>
+                    </div>
+      
+                   
                 </div>
-                </div>
-                <div class="border-2 flex-col justify-center items-end gap-0.5 inline-flex">
-                <div class="justify-start items-start inline-flex">
-                    <div class="text-gray-900 text-base font-semibold leading-normal">$12</div>
-                </div>
-                <div class="justify-start items-center inline-flex">
-                    <div></div>
-                </div>
-                </div>
+                <button class="add-to-cart-button">Add to Cart</button>
             </div>
-            </div>
-            <div class="w-[309px] flex-col justify-start items-start gap-5 inline-flex">
-            <div class="w-[309px] h-[347px] relative bg-slate-50 rounded-2xl">
-                <img class="object-contain w-80 h-[360px] left-[-6px] top-[-6px] absolute" src="./asset/close-up-lemon-sorbet-hero.jpeg" />
-                <div class="p-2.5 left-[261px] top-[12px] absolute bg-white rounded-full flex-col justify-center items-center inline-flex">
-                    <div class="w-4 h-4 relative">
-                      <img class="absolute inset-0 object-cover rounded-full" src="./asset/cart.png" alt="Cart Image">
+        </div>
+      
+        <!-- Lemon Sorbet -->
+        <div class="ice-cream-item product-container">
+            <img class="ice-cream-image" src="./asset/close-up-lemon-sorbet-hero.jpeg" alt="Lemon Sorbet">
+            <div class="ice-cream-details">
+                <div class="w-full flex md:flex-col flex-row md:items-center pt-4">
+                    <div class="mr-2 md:mr-0 md:text-center">
+                        <div class="text-gray-900 text-lg font-semibold leading-7">Lemon Sorbet</div>
+                        <div class="text-gray-600 text-sm font-normal leading-tight">4.9 (98)</div>
                     </div>
-                  </div>
-            </div>
-            <div class="w-[309px] px-4 justify-start items-start gap-5 inline-flex">
-                <div class="grow shrink basis-0 flex-col justify-start items-start gap-[15px] inline-flex">
-                <div class="h-[46px] flex-col justify-start items-start gap-0.5 flex">
-                    <div class="justify-start items-start inline-flex">
-                    <div class="grow shrink basis-0 text-gray-900 text-base font-semibold leading-normal">Lemon Sorbet</div>
-                    </div>
-                    <div class="justify-start items-center inline-flex">
-                    <div class="text-gray-600 text-sm font-normal leading-tight">Pint</div>
+                    <div class="ml-2 md:mr-0 md:text-center">
+                        <div class="text-gray-900 text-base font-semibold leading-normal">$10</div>
+                        <div class="text-gray-600 text-sm font-normal leading-tight">Pint</div>
                     </div>
                 </div>
-                <div class="justify-start items-start gap-1 inline-flex">
-                    <div class="w-5 h-5 relative"></div>
-                    <div class="justify-start items-center flex">
-                    <div class="text-gray-600 text-sm font-normal leading-tight">4.9 (98)</div>
-                    </div>
-                </div>
-                </div>
-                <div class="border-2 flex-col justify-center items-end gap-0.5 inline-flex">
-                <div class="justify-start items-start inline-flex">
-                    <div class="text-gray-900 text-base font-semibold leading-normal">$10</div>
-                </div>
-                <div class="justify-start items-center inline-flex">
-                    <div></div>
-                </div>
-                </div>
-            </div>
-            </div>
-            <div class="w-[309px] flex-col justify-start items-start gap-5 inline-flex">
-            <div class="w-[309px] h-[347px] relative bg-slate-50 rounded-2xl">
-                <img class="object-contain w-80 h-[360px] left-[-6px] top-[-6px] absolute" src="./asset/Cookie-Dough-Ice-Cream-9.jpeg" />
-                <div class="p-2.5 left-[261px] top-[12px] absolute bg-white rounded-full flex-col justify-center items-center inline-flex">
-                    <div class="w-4 h-4 relative">
-                      <img class="absolute inset-0 object-cover rounded-full" src="./asset/cart.png" alt="Cart Image">
-                    </div>
-                  </div>
-            </div>
-            <div class="w-[309px] px-4 justify-start items-start gap-5 inline-flex">
-                <div class="grow shrink basis-0 flex-col justify-start items-start gap-[15px] inline-flex">
-                <div class="h-[70px] flex-col justify-start items-start gap-0.5 flex">
-                    <div class="justify-start items-start inline-flex">
-                    <div class="grow shrink basis-0 text-gray-900 text-base font-semibold leading-normal">Chocolate chip cookie dough</div>
-                    </div>
-                    <div class="justify-start items-center inline-flex">
-                    <div class="text-gray-600 text-sm font-normal leading-tight">Pint</div>
-                    </div>
-                </div>
-                <div class="justify-start items-start gap-1 inline-flex">
-                    <div class="w-5 h-5 relative"></div>
-                    <div class="justify-start items-center flex">
-                    <div class="text-gray-600 text-sm font-normal leading-tight">4.9 (98)</div>
-                    </div>
-                </div>
-                </div>
-                <div class="border-2 flex-col justify-center items-end gap-0.5 inline-flex">
-                <div class="justify-start items-start inline-flex">
-                    <div class="text-gray-900 text-base font-semibold leading-normal">$12</div>
-                </div>
-                <div class="justify-start items-center inline-flex">
-                    <div></div>
-                </div>
-                </div>
-            </div>
-            </div>
-            <div class="w-[309px] flex-col justify-start items-start gap-5 inline-flex">
-            <div class="w-[309px] h-[347px] relative bg-slate-50 rounded-2xl">
-                <img class="object-contain w-80 h-[360px] left-[-6px] top-[-6px] absolute" src="./asset/ice_cream_sando.jpg" />
-                <div class="p-2.5 left-[261px] top-[12px] absolute bg-white rounded-full flex-col justify-center items-center inline-flex">
-                    <div class="w-4 h-4 relative">
-                      <img class="absolute inset-0 object-cover rounded-full" src="./asset/cart.png" alt="Cart Image">
-                    </div>
-                  </div>
-            </div>
-            <div class="w-[309px] px-4 justify-start items-start gap-5 inline-flex">
-                <div class="grow shrink basis-0 flex-col justify-start items-start gap-[15px] inline-flex">
-                <div class="h-[70px] flex-col justify-start items-start gap-0.5 flex">
-                    <div class="justify-start items-start inline-flex">
-                    <div class="grow shrink basis-0 text-gray-900 text-base font-semibold leading-normal">Fruity Pebbles ice cream sandwich</div>
-                    </div>
-                    <div class="justify-start items-center inline-flex">
-                    <div class="text-gray-600 text-sm font-normal leading-tight">Ice Cream Sandwich</div>
-                    </div>
-                </div>
-                <div class="justify-start items-start gap-1 inline-flex">
-                    <div class="w-5 h-5 relative"></div>
-                    <div class="justify-start items-center flex">
-                    <div class="text-gray-600 text-sm font-normal leading-tight">4.9 (98)</div>
-                    </div>
-                </div>
-                </div>
-                <div class="border-2 flex-col justify-center items-end gap-0.5 inline-flex">
-                <div class="justify-start items-start inline-flex">
-                    <div class="text-gray-900 text-base font-semibold leading-normal">$6</div>
-                </div>
-                <div class="justify-start items-center inline-flex">
-                    <div></div>
-                </div>
-                </div>
-            </div>
-            </div>
-            <div class="w-[309px] flex-col justify-start items-start gap-5 inline-flex">
-            <div class="w-[309px] h-[347px] relative bg-slate-50 rounded-2xl">
-                <img class="object-contain h-[360px] left-[-6px] top-[-6px] absolute" src="./asset/cereal_milk.jpeg" />
-                <div class="p-2.5 left-[261px] top-[12px] absolute bg-white rounded-full flex-col justify-center items-center inline-flex">
-                    <div class="w-4 h-4 relative">
-                      <img class="absolute inset-0 object-cover rounded-full" src="./asset/cart.png" alt="Cart Image">
-                    </div>
-                  </div>
-            </div>
-            <div class="w-[309px] px-4 justify-start items-start gap-5 inline-flex">
-                <div class="grow shrink basis-0 flex-col justify-start items-start gap-[15px] inline-flex">
-                <div class="h-[46px] flex-col justify-start items-start gap-0.5 flex">
-                    <div class="justify-start items-start inline-flex">
-                    <div class="grow shrink basis-0 text-gray-900 text-base font-semibold leading-normal">Cereal Milk</div>
-                    </div>
-                    <div class="justify-start items-center inline-flex">
-                    <div class="text-gray-600 text-sm font-normal leading-tight">Pint</div>
-                    </div>
-                </div>
-                <div class="justify-start items-start gap-1 inline-flex">
-                    <div class="w-5 h-5 relative"></div>
-                    <div class="justify-start items-center flex">
-                    <div class="text-gray-600 text-sm font-normal leading-tight">4.9 (98)</div>
-                    </div>
-                </div>
-                </div>
-                <div class="border-2 flex-col justify-center items-end gap-0.5 inline-flex">
-                <div class="justify-start items-start inline-flex">
-                    <div class="text-gray-900 text-base font-semibold leading-normal">$12</div>
-                </div>
-                <div class="justify-start items-center inline-flex">
-                    <div></div>
-                </div>
-                </div>
-            </div>
-            </div>
-            <div class="w-[309px] flex-col justify-start items-start gap-5 inline-flex">
-            <div class="w-[309px] h-[347px] relative bg-slate-50 rounded-2xl">
-                <img class="object-fill h-[360px] left-[-6px] top-[-6px] absolute" src="./asset/homemade-chocolate-brownie-ice-cream-vegan_5134.webp" />
-                <div class="p-2.5 left-[261px] top-[12px] absolute bg-white rounded-full flex-col justify-center items-center inline-flex">
-                    <div class="w-4 h-4 relative">
-                      <img class="absolute inset-0 object-cover rounded-full" src="./asset/cart.png" alt="Cart Image">
-                    </div>
-                  </div>
-            </div>
-            <div class="w-[309px] px-4 justify-start items-start gap-5 inline-flex">
-                <div class="grow shrink basis-0 flex-col justify-start items-start gap-[15px] inline-flex">
-                <div class="h-[46px] flex-col justify-start items-start gap-0.5 flex">
-                    <div class="justify-start items-start inline-flex">
-                    <div class="grow shrink basis-0 text-gray-900 text-base font-semibold leading-normal">Chocolate Brownie</div>
-                    </div>
-                    <div class="justify-start items-center inline-flex">
-                    <div class="text-gray-600 text-sm font-normal leading-tight">Pint</div>
-                    </div>
-                </div>
-                <div class="justify-start items-start gap-1 inline-flex">
-                    <div class="w-5 h-5 relative"></div>
-                    <div class="justify-start items-center flex">
-                    <div class="text-gray-600 text-sm font-normal leading-tight">4.9 (98)</div>
-                    </div>
-                </div>
-                </div>
-                <div class="border-2 flex-col justify-center items-end gap-0.5 inline-flex">
-                <div class="justify-start items-start inline-flex">
-                    <div class="text-gray-900 text-base font-semibold leading-normal">$12</div>
-                </div>
-                <div class="justify-start items-center inline-flex">
-                    <div></div>
-                </div>
-                </div>
-            </div>
+                <button class="add-to-cart-button">Add to Cart</button>
             </div>
         </div>
 
-        
-        </div>
-        <div class="w-[309px] h-[412px] pr-6 left-0 top-0 absolute flex-col justify-start items-start gap-2.5 inline-flex">
-        <div class="h-[412px] flex-col justify-start items-start gap-8 flex">
-            <div class="pb-10 border-b border-gray-200 flex-col justify-start items-start gap-2 flex">
-            <div class="justify-start items-start inline-flex">
-                <div class="text-gray-900 text-lg font-semibold leading-7">Categories</div>
-            </div>
-            <div class="h-[72px] pt-4 flex-col justify-start items-start gap-4 flex">
-                <div class="justify-start items-start gap-3 inline-flex">
-                <div class="w-5 h-5 rounded border border-slate-400"></div>
-                <div class="justify-start items-center flex">
-                    <div class="text-gray-600 text-sm font-normal leading-tight">Pint</div>
+        <!-- Chocolate Chip Cookie Dough -->
+        <div class="ice-cream-item product-container">
+            <img class="ice-cream-image" src="./asset/Cookie-Dough-Ice-Cream-9.jpeg" alt="Chocolate Chip Cookie Dough">
+            <div class="ice-cream-details">
+                <div class="w-full flex md:flex-col flex-row md:items-center pt-4">
+                    <div class="mr-2 md:mr-0 md:text-center">
+                        <div class="text-gray-900 text-lg font-semibold leading-7">Chocolate Chip Cookie Dough</div>
+                        <div class="text-gray-600 text-sm font-normal leading-tight">4.9 (98)</div>
+                    </div>
+                    <div class="ml-2 md:mr-0 md:text-center">
+                        <div class="text-gray-900 text-base font-semibold leading-normal">$12</div>
+                        <div class="text-gray-600 text-sm font-normal leading-tight">Pint</div>
+                    </div>
                 </div>
-                </div>
-                <div class="justify-start items-start gap-3 inline-flex">
-                <div class="w-5 h-5 rounded border border-slate-400"></div>
-                <div class="justify-start items-center flex">
-                    <div class="text-gray-600 text-sm font-normal leading-tight">Ice Cream Sandwiches</div>
-                </div>
-                </div>
-            </div>
-            </div>
-            <div class="flex-col justify-start items-start gap-2 flex">
-            <div class="justify-start items-start inline-flex">
-                <div class="text-gray-900 text-lg font-semibold leading-7">Sort order</div>
-            </div>
-            <div class="h-[196px] py-4 flex-col justify-start items-start gap-4 flex">
-                <div class="justify-start items-start gap-3 inline-flex">
-                <div class="w-5 h-5 rounded-full border border-slate-400"></div>
-                <div class="justify-start items-center flex">
-                    <div class="text-gray-600 text-sm font-normal leading-tight">Most Popular</div>
-                </div>
-                </div>
-                <div class="justify-start items-start gap-3 inline-flex">
-                <div class="w-5 h-5 rounded-full border border-slate-400"></div>
-                <div class="justify-start items-center flex">
-                    <div class="text-gray-600 text-sm font-normal leading-tight">Best Rating</div>
-                </div>
-                </div>
-                <div class="justify-start items-start gap-3 inline-flex">
-                <div class="w-5 h-5 rounded-full border border-slate-400"></div>
-                <div class="justify-start items-center flex">
-                    <div class="text-gray-600 text-sm font-normal leading-tight">Newest</div>
-                </div>
-                </div>
-                <div class="justify-start items-start gap-3 inline-flex">
-                <div class="w-5 h-5 rounded-full border border-slate-400"></div>
-                <div class="justify-start items-center flex">
-                    <div class="text-gray-600 text-sm font-normal leading-tight">Price Low - Hight</div>
-                </div>
-                </div>
-                <div class="justify-start items-start gap-3 inline-flex">
-                <div class="w-5 h-5 rounded-full border border-slate-400"></div>
-                <div class="justify-start items-center flex">
-                    <div class="text-gray-600 text-sm font-normal leading-tight">Price Hight - Low</div>
-                </div>
-                </div>
-            </div>
+                <button class="add-to-cart-button">Add to Cart</button>
             </div>
         </div>
+
+        <!-- Fruity Pebbles Ice Cream Sandwich -->
+        <div class="ice-cream-item product-container">
+            <img class="ice-cream-image" src="./asset/ice_cream_sando.jpg" alt="Fruity Pebbles Ice Cream Sandwich">
+            <div class="ice-cream-details">
+                <div class="w-full flex md:flex-col flex-row md:items-center pt-4">
+                    <div class="mr-2 md:mr-0 md:text-center">
+                        <div class="text-gray-900 text-lg font-semibold leading-7">Fruity Pebbles Ice Cream Sandwich</div>
+                        <div class="text-gray-600 text-sm font-normal leading-tight">4.9 (98)</div>
+                    </div>
+                    <div class="ml-2 md:mr-0 md:text-center">
+                        <div class="text-gray-900 text-base font-semibold leading-normal">$6</div>
+                        <div class="text-gray-600 text-sm font-normal leading-tight">Ice Cream Sandwich</div>
+                    </div>
+                </div>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Cereal Milk -->
+        <div class="ice-cream-item product-container">
+            <img class="ice-cream-image" src="./asset/cereal_milk.jpeg" alt="Cereal Milk">
+            <div class="ice-cream-details">
+                <div class="w-full flex md:flex-col flex-row md:items-center pt-4">
+                    <div class="mr-2 md:mr-0 md:text-center">
+                        <div class="text-gray-900 text-lg font-semibold leading-7">Cereal Milk</div>
+                        <div class="text-gray-600 text-sm font-normal leading-tight">4.9 (98)</div>
+                    </div>
+                    <div class="ml-2 md:mr-0 md:text-center">
+                        <div class="text-gray-900 text-base font-semibold leading-normal">$12</div>
+                        <div class="text-gray-600 text-sm font-normal leading-tight">Pint</div>
+                    </div>
+                </div>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
+        </div>
+
+        <!-- Chocolate Brownie -->
+        <div class="ice-cream-item product-container">
+            <img class="ice-cream-image" src="./asset/fudge-ice-cream-1.jpeg" alt="Chocolate Brownie">
+            <div class="ice-cream-details">
+                <div class="w-full flex md:flex-col flex-row md:items-center pt-4">
+                    <div class="mr-2 md:mr-0 md:text-center">
+                        <div class="text-gray-900 text-lg font-semibold leading-7">Chocolate Brownie</div>
+                        <div class="text-gray-600 text-sm font-normal leading-tight">4.9 (98)</div>
+                    </div>
+                    <div class="ml-2 md:mr-0 md:text-center">
+                        <div class="text-gray-900 text-base font-semibold leading-normal">$12</div>
+                        <div class="text-gray-600 text-sm font-normal leading-tight">Pint</div>
+                    </div>
+                </div>
+                <button class="add-to-cart-button">Add to Cart</button>
+            </div>
         </div>
     </div>
-  </div>
 </body>
 </html>
+
+
